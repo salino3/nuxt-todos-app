@@ -1,7 +1,7 @@
 <template>
  <main>
   <h1>Task Board</h1>
-  <p>Create a list of tasks</p>
+  <h2>Create a list of tasks</h2>
   <div class="create-new">
     <input
      type="text"
@@ -12,14 +12,13 @@
     <button @click="addTask">Add</button>
   </div>
   <div class="tasks">
-
     <Task
      v-for="(task, index) in $store.state.tasks"
      :key="index"
      :task="task"
     />
     <p class="text-no-tasks" v-if="$store.state.tasks.length === 0">
-      "There are no tasks.."
+      * There are no tasks.. *
     </p>
 
   </div>

@@ -12,10 +12,10 @@
 export default {
  props: ['task'],
  methods: {
-  toggleDone(task) {
+  toggleDone() {
     this.$store.commit('TOGGLE_TASK', this.task);
   },
-  removeTask(task) {
+  removeTask() {
     this.$store.commit('REMOVE_TASK', this.task)
   }
  }

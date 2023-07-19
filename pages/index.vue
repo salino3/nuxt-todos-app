@@ -18,6 +18,10 @@
      :key="index"
      :task="task"
     />
+    <p class="text-no-tasks" v-if="$store.state.tasks.length === 0">
+      "There are no tasks.."
+    </p>
+
   </div>
  </main>
 </template>
@@ -40,3 +44,11 @@ export default {
   }
 }
 </script>
+
+<style>
+
+.text-no-tasks {
+  text-align: center;
+  font-size: 22px;
+}
+</style>
